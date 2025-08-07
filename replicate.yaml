@@ -1,0 +1,9 @@
+name: goldtrendnet
+description: AI model for forecasting gold price trends
+input:
+  - name: days
+    type: integer
+    default: 3
+    description: Number of days to forecast
+output:
+  type: number
