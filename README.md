@@ -1,16 +1,20 @@
 # GoldTrendNet
 
-GoldTrendNet is a lightweight LSTM-based AI model designed to forecast short-term gold price trends using historical data. It serves as a foundation for building financial analytics tools in the precious metals domain.
+**GoldTrendNet** is an experimental AI project for forecasting market trends, combining multiple models: one based on historical price data (LSTM), and another based on textual signal interpretation (Replicate). The goal is to provide flexible tools for evaluating gold price movements and broader market sentiment.
 
-## Features:
-- Predict gold price 1–5 days ahead
-- Visualize market trends
-- Extendable to silver, platinum, and other assets
-- Useful for Gold IRA comparison tools and investment calculators
+---
 
-## Example usage:
+## 📈 Model 1: Gold Price Forecasting (LSTM)
+
+This model is trained on historical gold price data and uses a Long Short-Term Memory (LSTM) neural network to predict future values.
+
+### 🔧 Usage
+
 ```python
-from goldtrendnet import predict_gold_price
+from keras.models import load_model
+import numpy as np
 
-result = predict_gold_price(days=3)
-print(f"Predicted gold price in 3 days: ${result}")
+model = load_model('gold_price_model.h5')
+input_data = np.array([[...]])
+prediction = model.predict(input_data)
+print(prediction)
