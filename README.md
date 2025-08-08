@@ -18,3 +18,5 @@ model = load_model('gold_price_model.h5')
 input_data = np.array([[...]])
 prediction = model.predict(input_data)
 print(prediction)
+
+Triggering workflow for Replicate publish
